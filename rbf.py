@@ -35,7 +35,7 @@ def rbf_scipy(X, beta):
 # 
 # TODO: Write the Cython implementation in a separate fastloop.pyx file, compile and import it here
 # 
-# from fastloop import rbf_network_cython
+from fastloop import rbf_network_cython
 
 
 # Make up some data
@@ -57,9 +57,9 @@ rbf_scipy(X, beta)
 print("Scipy: ", time.time() - t0)
 
 # Testing the performance of Cython
-#t0 = time.time()
-#rbf_network_cython(X, beta, theta)
-#print("Cython: ", time.time() - t0)
+t0 = time.time()
+rbf_network_cython(X, beta, theta)
+print("Cython: ", time.time() - t0)
 
 
 
